@@ -65,7 +65,7 @@ class Vault_test : public beast::unit_test::suite
                     {.depositor = depositor,
                      .id = keylet.key,
                      .amount = PrettyAmount(
-                         STAmount(asset.raw(), 1ul, 0, true), "")});
+                         STAmount(asset.raw(), std::uint32_t(1ul), 0, true), "")});
                 env(tx, ter(temBAD_AMOUNT));
             }
 
@@ -145,7 +145,7 @@ class Vault_test : public beast::unit_test::suite
                     {.depositor = depositor,
                      .id = keylet.key,
                      .amount = PrettyAmount(
-                         STAmount(asset.raw(), 1ul, 0, true), "")});
+                         STAmount(asset.raw(), std::uint32_t(1ul), 0, true), "")});
                 env(tx, ter(temBAD_AMOUNT));
             }
 
@@ -194,7 +194,7 @@ class Vault_test : public beast::unit_test::suite
                      .id = keylet.key,
                      .holder = depositor,
                      .amount = PrettyAmount(
-                         STAmount(asset.raw(), 1ul, 0, true), "")});
+                         STAmount(asset.raw(), std::uint32_t(1ul), 0, true), "")});
                 env(tx, ter(temBAD_AMOUNT));
             }
 
